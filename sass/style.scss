@@ -1,0 +1,417 @@
+@import url(http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+
+
+@import "variables";
+@import "reset";
+@import "fontawesome";
+
+/* sass goes here */
+
+$green: hsla(115, 41%, 62%, 1);
+$grey: hsla(0, 6%, 56%, 1);
+$lightgrey: hsla(0, 0%, 98%, 1);
+$black: hsla(0, 0%, 13%, 1);
+$blue: hsla(214, 50%, 43%, 1);
+
+//global style
+
+body {
+	font-family: sans-serif;
+	color: $black;
+	h1 {
+		font-size: 55px;
+		color: white;
+	}
+	p {
+		line-height: 1.6em;
+	}
+	p, span {
+		font-size: .9em;
+		color: $grey;
+	}
+	h2 {
+		font-size: 2em;
+		margin-bottom: .4em;
+	}
+	h3 {
+		font-size: 1em;
+		margin-bottom: 6px;
+	}
+	h2, h3 {
+		text-transform: uppercase;
+	}
+	#top_nav, #services, #featured_container, #fportfolio, #qoutes_container, #nav_bottom > ul, #team, #contact {
+		width: 82%;
+		margin: 0 auto;
+	}
+	.services_divs > i, .featured_magic > i, #qoutes_container > i {
+		font-size: 2.3em;
+	}
+	.services_divs > i, .featured_magic > i {
+		margin-right: 1em;
+	}
+	#services, #featured, #portfolio, #team {
+		padding: 5.5em 0;
+	}
+}
+
+header {
+	background-image: url(http://www.w3goods.com/wp-content/uploads/knight-demo/img/pw_maze_black_2X.png);
+	color: white;
+	height: 147vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	h1 {
+		margin: .8em 0;
+		font-size: 3em;
+	}
+	span {
+		text-transform: uppercase;
+		color: $grey;
+		font-size: .8em;
+		font-weight: 900;
+	}
+	a {
+		margin-top: 3em;
+		background-color: $green;
+		padding: 1em 1.8em;
+		color: white;
+		text-transform: uppercase;
+		font-size: 1em;
+		font-weight: 900;
+		border-radius: 3px;
+	}
+}
+
+#navi {
+	border-bottom: 1px solid lightgrey;
+	#top_nav {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			padding: 0 4em;
+			li {
+				margin: 1.5em 0 0;
+				a {
+					color: black;
+					text-transform: uppercase;
+					line-height: 67px;
+					font-size: .8em;
+					font-weight: 900;
+					transition: .4s ease-out;
+				}
+				a:hover {
+					cursor: pointer;
+					color: $green;
+				}
+			}
+		}
+	}
+}
+
+main {
+	background-color: white;
+}
+
+#services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	#services_para {
+		margin-bottom: 3.4em;
+		color: $black;
+		font-size: 1em;
+	}
+	article {
+		display: flex;
+		.services_divs {
+			display: flex;
+			i {
+				width: 30px;
+			}
+		}
+	}
+}
+
+#featured {
+	background-color: $lightgrey;
+	#featured_container {
+		display: flex;
+		img {
+			width: 42.5%;
+			height: auto;
+		}
+		p {
+			margin-bottom: 1.5em;
+		}
+		.featured_magic {
+			display: flex;
+			i {
+				color: $grey;
+				width: 30px;
+			}
+		}
+	}
+}
+
+#portfolio {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+		margin-bottom: 4.5em;
+	}
+	#nav_middle {
+		ul {
+			padding: 0;
+			margin-bottom: 1em;
+			li {
+				margin: 0 .7em;
+				a {
+					text-decoration: none;
+					padding: 13px 23px;
+					background-color: $lightgrey;
+					color: $black;
+					border-radius: 4px;
+					font-size: 12px;
+					font-weight: 700;
+					text-transform: uppercase;
+					transition: .4s ease-out;
+				}
+				a:hover {
+					background-color: $green;
+					cursor: pointer;
+					color: white;
+				}
+				#portfolio_all {
+					background-color: $green;
+					color: white;
+				}
+			}
+		}
+	}
+	#nav_middle > ul, aside {
+		display: flex;
+	}
+	aside {
+		text-align: center;
+		margin-top: 2.8em;
+		.portfolio_middle_div {
+			margin: 0 1.5em;
+		}
+		img:hover {
+			opacity: .6;
+			cursor: pointer;
+			transition: .4s ease-out;
+		}
+		h3 {
+			margin-top: 1.5em;
+		}
+	}
+}
+
+#qoutes {
+	background-image: url(http://www.w3goods.com/wp-content/uploads/knight-demo/img/section-bg1.jpg);
+	background-repeat: no-repeat;
+	padding: 3.5em 0;
+	#qoutes_container {
+		color: white;
+		text-align: center;
+		i {
+			border: 2px solid $green;
+			border-radius: 50%;
+			width: 2.3em;
+			height: 2.3em;
+			font-size: 1.7em;
+			color: $green;
+			line-height: 2.3em;
+		}
+		i:hover {
+			color: white;
+			border-color: white;
+			transition: .4s ease-out;
+			cursor: pointer;
+		}
+		p {
+			font-size: 1.7em;
+			color: white;
+			margin-top: 1em;
+			font-style: italic;
+		}
+		img {
+			border-radius: 50%;
+		}
+		h3 {
+			margin-top: .9em;
+		}
+		span {
+			color: white;
+		}
+	}
+}
+
+#nav_bottom {
+	background-color: $green;
+	ul {
+		height: 5em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img {
+			margin: 0 2.3em;
+		}
+	}
+}
+
+#team {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+		margin-bottom: 2.7em;
+	}
+	aside {
+		display: flex;
+		div {
+			text-align: center;
+			padding: 0 2em;
+			img{
+				border: 7px solid $lightgrey;
+				border-radius: 50%;
+			}
+			h3 {
+				margin-top: .9em;
+			}
+			p {
+				margin-top: 2em;
+			}
+		}
+	}
+}
+
+#business {
+	background-image: url(http://www.w3goods.com/wp-content/uploads/knight-demo/img/section-bg2.jpg);
+	text-align: center;
+	//padding: 4.9em;
+	height: 12.5em;
+	h1 {
+		margin: 0;
+		text-transform: uppercase;
+		font-size: 2.6em;
+		line-height: 5em;
+	}
+}
+
+#contact {
+	display: flex;
+	padding: 5em 0;
+	aside {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		padding-left: 3.5em;
+		.contact_div {
+			display: flex;
+			height: 3em;
+			margin-bottom: 1em;
+			i {
+				width: 20px;
+			}
+			h3 {
+				width: 6em;
+			}
+			span {
+				margin-bottom: 9px;
+				font-size: 1em;
+			}
+			#number_uppercase {
+				text-transform: uppercase;
+			}
+			.contact_span {
+				display: flex;
+				flex-direction: column;
+			}
+		}
+		ul {
+			display: flex;
+			margin-top: 3.8em;
+			li {
+				width: 3.1em;
+				height: 3.1em;
+				background-color: $black;
+				border-radius: 50%;
+				text-align: center;
+				margin: 0 .3em;
+				i {
+					color: white;
+					font-size: 1.5em;
+					line-height: 2em;
+				}
+			}
+			li:hover {
+				transition: .4s ease-out;
+				background-color: $blue;
+				cursor: pointer;
+			}
+		}
+	}
+	form {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		input {
+			height: 2.3em;
+		}
+		textarea {
+			height: 9.2em;
+			font-size: 1.2em;
+		}
+		input, textarea {
+			border-radius: 5px;
+			border: 1px solid lightgrey;
+			margin-bottom: 15px;
+			padding: 10px;
+		}
+		button {
+			width: 12.5em;
+			padding: 1.2em 0;
+			margin-bottom: 0;
+			background-color: $green;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			text-transform: uppercase;
+			font-weight: 800;
+		}
+		button:hover {
+			background-color: $black;
+			cursor: pointer;
+			transition: .4s ease-out;
+		}
+	}
+}
+
+footer {
+	background-image: url(http://www.w3goods.com/wp-content/uploads/knight-demo/img/pw_maze_black_2X.png);
+	text-align: center;
+	color: white;
+	padding: 2.8em 0 2em;
+	img {
+		margin-bottom: 2em;
+	}
+	p {
+		margin-bottom: 0;
+		color: $lightgrey;
+	}
+	span {
+		color: $green;
+		font-weight: 900;
+		transition: .4s ease-out;
+	}
+	span:hover {
+		cursor: pointer;
+		color: white;
+	}
+}
